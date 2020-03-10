@@ -1,0 +1,40 @@
+https://fonts.googleapis.com/css?family=Fondamento:400,400i&display=swap
+
+la taille de la police 
+
+le margin
+
+la couleur de la police
+
+la taille des bouton
+
+couleur du fond 
+
+couleur du titre taille 
+
+taille des formulaire et type 
+
+blanc beige 
+
+
+ orange sur gris foncer 
+
+ rgb(204, 79, 30); c'est le orange ces la couleur de la police
+
+ rgb(56, 55, 55); lui c'est le gris ond d'ecran
+
+ rgba(255,255,255,0.8); lui c'est l blanc en surbrillant
+
+body {
+    margin:0;
+}
+
+
+
+
+h2{
+    text-align: center;
+    font-family: 'Fondamento', cursive;
+}
+
+.titre1
