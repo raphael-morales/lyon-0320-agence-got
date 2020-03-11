@@ -1,40 +1,44 @@
-https://fonts.googleapis.com/css?family=Fondamento:400,400i&display=swap
-
-la taille de la police 
-
-le margin
-
-la couleur de la police
-
-la taille des bouton
-
-couleur du fond 
-
-couleur du titre taille 
-
-taille des formulaire et type 
-
-blanc beige 
-
-
- orange sur gris foncer 
-
- rgb(204, 79, 30); c'est le orange ces la couleur de la police
-
- rgb(56, 55, 55); lui c'est le gris ond d'ecran
-
- rgba(255,255,255,0.8); lui c'est l blanc en surbrillant
-
-body {
-    margin:0;
-}
-
-
-
-
-h2{
+h1.reservation {
     text-align: center;
-    font-family: 'Fondamento', cursive;
+    margin-bottom: 50px;
 }
 
-.titre1
+section.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+section.destination {
+    margin: 20px;
+    width: max-content;
+}
+
+section.date {
+    margin: 20px;
+}
+
+section.voyageur {
+    justify-content: center;
+    margin: 20px;
+}
+
+section.voyageur #enfant {
+    width: 200px;
+}
+
+section.voyageur #adulte {
+    width: 200px;
+}
+
+section.button {
+    display: flex;
+
+    margin: 20PX;
+}
+
+button {
+    width: 100%;
+}

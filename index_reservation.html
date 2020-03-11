@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style>.css">
+    <link rel="stylesheet" href="style.css">
     <title></title>
 <body>
   <header>
   </header>
 
-<section>
+  <h1 class="reservation">Formulaire de réservation</h1>
+
+<section class="formulaire">
+
 <section class="destination">
-  <label for="destination">Destination</label>
+  <label for="destination">Où?</label>
   <select name="destination" id="destination">
     <option value="port_real">Port Real</option>
     <option value="winterfell">Winterfell</option>
@@ -21,23 +24,24 @@
 
 
 <section class="date">
-  <label for="start">Date de départ</label>
+  <div>
+  <label for="start">Départ</label>
   <input type="date" id="start" name="start" min="2020-06-01" max="2021-12-24">
-  <label for="return">Date de retour</label>
+  <label for="return">Retour</label>
   <input type="date" id="return" name="return" min="2020-06-07" max="2021-12-31">
+  </div>
 </section>
 
 <section class="voyageur">
-  <label for="adulte">Adultes</label>
-  <input id="number" type="number" min="1" max="15" required>
-  <label for="enfant">Enfants</label>
-  <input id="number" type="number" min="1" max="15">
+  <input id="adulte" type="number" placeholder="Nombre d'adultes" min="1" max="15" required>
+  <input id="enfant" type="number" placeholder="Nombre d'enfants" min="0" max="15">
 </section>
 
 <section class="button">
   <button name="button">Rechercher</button>
 
-<section>
+</section>
+</section>
 
 
 <footer>
