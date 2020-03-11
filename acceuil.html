@@ -8,25 +8,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Fondamento&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">  
     </head>
     <body>
     
             <h2 class=titreAcceuil>Voyages dans l'univers de GOT</h2>
-            <section class="filtres">
-                <section class="conteneurFiltre">
-                    <select name="destination">
-                        <option value="test1">test1</option>
-                        <option value="test2">test2</option>
-                        <option value="test3">test3</option>
-                    </select>
-                    <button type="button" class=" boutonAcc btn btn-dark">GO !</button>
+            
+            <section class="headAcceuil">
+                <section class="conteneurLigne">
+                    <div id="precedent">
+                        <input type="button" value="<" title="Photo précédente" onclick="slide('arriere')"/>
+                    </div>
+                    <section class="conteneurFiltre">
+                        <select name="destination">
+                            <option value="test1">test1</option>
+                            <option value="test2">test2</option>
+                            <option value="test3">test3</option>
+                        </select>
+                        
+                        <button type="button" class=" boutonAcc btn btn-dark">GO !</button>
                     
-                    
+                    </section>
+                    <div id="suivant">
+                        <input type="button" value=">" title="Photo suivante" onclick="slide('avant')"/>
+                    </div>	
                 </section>
             </section>
             <section id="conteneurimgSlide">
                 <img  id="imgSlide"  src="https://static.hitek.fr/img/actualite/2017/01/13/fb_the-wall-from-the-south.jpg"  alt="image slider" />
+            </section>
+            <section class="">
+                <article>Choisissez votre déstination, puis patrez à la conquète de Westeros en quelques clics</article>
+            </section>
+            <section>
+                <img class="carte"src="https://i.pinimg.com/originals/83/10/80/8310802af943e1605e67048be73945b8.jpg" alt="carte Westeros">
             </section>
 
             <script src="img-deroulante.js"></script>
