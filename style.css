@@ -28,13 +28,13 @@ blanc beige
  rgba(255,255,255,0.8); lui c'est l blanc en surbrillant*/
 
  @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body {
     margin:0;
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
     font-weight:bold;
-  
     background-color: rgba(197,195,187,0.8);
 
 }
@@ -51,6 +51,10 @@ h2{
 #imgSlide{
     width: 100%;
     height: 500px;
+    position: absolute;
+    z-index: 5;
+    top:0;
+    right: 0;
     transition: opacity 1s ease-in-out;
 }
 .titreAcceuil{
@@ -60,11 +64,12 @@ h2{
     text-align:center;
     margin-top: 100px;
     text-shadow:1px 1px 1px black ;
+    z-index: 6;
 }
 .headAcceuil{
     width: 100%;
     height: 500px;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
    
@@ -72,6 +77,7 @@ h2{
 .conteneurFiltre{
     height: 100%;
     display:flex;
+    z-index: 6;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -84,17 +90,17 @@ h2{
    margin-bottom: 10px;
    padding: 7px;
    border: none;
-   font-size: 20px;
+   font-weight: bold;
    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
    outline: none;
 }
 .conteneurFiltre select option{
     background-color:rgba(50, 50, 50, 1);
-    border-radius: 5px;
 }
 .boutonAcc{
     background-color:rgba(50, 50, 50, 0.8);
     margin-bottom: 10px;
+    font-weight: bold;
     color: rgb(204, 79, 30);
 }
 .boutonAcc:hover{
@@ -109,18 +115,23 @@ h2{
 } 
 .conteneurLigne{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;;
     margin-top: 100px;
     
 }
-.conteneurLigne input[type="button"]{
+.btnSuivant{
     background-color: rgba(0,0,0,0);
     border:none;
-    font-size: 50px;
+    font-size: 70px;
     outline: none;
     color: rgb(204, 79, 30);
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
+    z-index: 6;
 }
+.btnSuivant:hover{
+    font-weight: bold;
+}
+
 .phraseAcceuil article{
     font-size: 22px;
     text-align: center;
@@ -198,7 +209,7 @@ a:hover{
 }
 @media screen and (min-width: 740px) {
     body{
-        margin:0 50px;
+       margin:0 50px;
     }
     .header{
         padding: 0 50px 0 50px;
@@ -227,4 +238,20 @@ a:hover{
     #imgSlide{
         width: 100%;
         height: 700px;
+    }
+    .headAcceuil{
+        height: 700px;
+    }
+    .conteneurFiltre select{
+        width: 400px;
+    }
+    .conteneurFiltre{
+        flex-direction:row;
+    }
+    .boutonAcc{
+        margin-left:75px;
+    }
+
   }
+
+  
