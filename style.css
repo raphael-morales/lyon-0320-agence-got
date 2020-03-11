@@ -27,15 +27,22 @@ blanc beige
 
  rgba(255,255,255,0.8); lui c'est l blanc en surbrillant*/
 
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
 body {
     margin:0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    font-weight:bold;
+  
+    background-color: rgba(197,195,187,0.8);
 
 }
 
 h2{
     text-align: center;
-    font-family: 'Fondamento', cursive;
+    font-family: 'Amatic SC', cursive;
+    font-weight:bold;
     
 }
 /*acceuil*/
@@ -48,17 +55,19 @@ h2{
 }
 .titreAcceuil{
     width: 100%;
-    position:absolute;
     color: rgb(204, 79, 30);
-    top:50px;
     font-size: 50px;
     text-align:center;
+    margin-top: 100px;
     text-shadow:1px 1px 1px black ;
 }
 .headAcceuil{
     width: 100%;
     height: 500px;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+   
 }
 .conteneurFiltre{
     height: 100%;
@@ -101,7 +110,7 @@ h2{
 .conteneurLigne{
     display: flex;
     justify-content: space-between;
-    margin-top: 225px;
+    margin-top: 100px;
     
 }
 .conteneurLigne input[type="button"]{
@@ -112,3 +121,110 @@ h2{
     color: rgb(204, 79, 30);
     font-family: 'Shadows Into Light', cursive;
 }
+.phraseAcceuil article{
+    font-size: 22px;
+    text-align: center;
+    padding: 50px 20px;
+    
+}
+
+/*header*/
+.menu{
+    width:100%;
+    margin-bottom: 10px;
+}
+.header{
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+}
+.header img{
+    height: 36px;
+}
+ .title h1{
+    font-size: 18px;
+    color: rgb(77, 74, 74);
+    font-family: 'Fondamento', cursive;
+    text-shadow: 0.5px 1px rgb(206, 61, 24);
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    background:rgb(56, 55, 55);
+    padding: 6px 8px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.fa-bars{
+    margin: 2px;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+}
+.dropdown{
+    width:100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgb(56, 55, 55);
+    border-radius:4px;
+    overflow:hidden;
+    transition:all .7s;
+    max-height:0;
+}
+.down{
+    max-height:150px;
+}
+.arrow.gone{
+    display:block;
+}
+a{
+    padding:7px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(206, 61, 24);
+}
+a:hover{
+    transform:scale(1.10);
+    color:rgba(255,255,255,0.8);
+    transition:all .1s;
+}
+@media screen and (min-width: 740px) {
+    body{
+        margin:0 50px;
+    }
+    .header{
+        padding: 0 50px 0 50px;
+    }
+    .header img{
+     height: 35px ;
+    }
+    .title h1{
+        font-size: 22px;
+    }
+    .burger{
+        display: none;
+    }
+    .dropdown{
+        justify-content: flex-end;
+        flex-direction: row;
+        height: 45px;
+        max-height: none;
+        position: sticky;
+        top: 0;
+    }
+    a{
+       margin: 0 40px;
+    }
+    /*accueil*/
+    #imgSlide{
+        width: 100%;
+        height: 700px;
+  }
