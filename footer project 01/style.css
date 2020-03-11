@@ -33,6 +33,7 @@ footer div h1 {
     height: 290px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 8px;
 }
 .color-point{
     color:#ff9135;
@@ -73,7 +74,6 @@ footer a:link{
     width: 400px;
     height: 100px;
     cursor: pointer;
-    align-content: center;
 }
 .end-color-footer{
     background-color: #ff9135;
@@ -104,17 +104,15 @@ footer a:link{
 }
 .reseau-sociau:hover{
     opacity: 0.7;
-    align-content: center;
 }
 .img-paiement-footer:hover{
     opacity: 0.7;
-    align-items: center;
 }
 .rebrique-footer ul li:hover{
     opacity: 0.7;
 }
 
-/*@media  Min-width:840px*/
+/*@media  Min-width:740px*/
 
 @media screen and (min-width:740px){
     .logo-footer{
@@ -130,6 +128,7 @@ footer a:link{
     }
     .rebrique-footer{
         float: right;
+        font-size: 25px;
     }
     .copy{
         text-align: center;
