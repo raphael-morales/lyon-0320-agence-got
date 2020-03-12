@@ -11,13 +11,16 @@
     <title>Contact us</title>
   </head>
   <body>
+    
+    <?php include ("_header.html"); ?>
+
     <main>
       <section class="coordonnées">
-        <div>
+        <div class="adresse">
             <h2>Adresse</h2>
-            <p>17 Rue Delandine, 69002 Lyon, France</p>
+            <p>17 Rue Delandine, <br>69002 Lyon, France</p>
         </div>
-        <div>
+        <div class="contact">
             <h2>Contactez-nous</h2>
             <p>tèl: 04 78 58 46 15</p>
         </div>
@@ -44,31 +47,8 @@
         </div>
 
     </main>
-    <hr class="hr-footer">
-<footer>
-    <div class="color-diff-back"></div>
-        <div class="back-color">
-            <a href="#"><h1 class="h1-footer">Agence De Voyage GOT<span class="color-point">...</span></h1></a>
-                <figure class="figure-footer">
-                    <a href="#"><img class="logo-footer" src="https://fr.web.img6.acsta.net/r_1280_720/newsv7/19/04/29/06/35/0225049.jpg" alt="Logo" title="Le logo de notre agence de voyage"></a>
-                    <figcaption class="figuration-footer">Etes<span class="color-point"><strong>-</strong></span>Vous Prêt<span class="color-point"><strong>.</strong></span></figcaption>
-                </figure>
-            <div class="rebrique-footer">
-                <ul>
-                    <a href="#"><li title="Lets Go"><strong>Contactez<span><strong>-</strong></span></strong>Nous <span class="color-point"><strong>&rarr;</strong></span></li></a>
-                    <a href="#"><li title="Non Ne Faites pas ça SVP"><strong>Annulation &#x1F614;</strong></li></a>
-                    <a href="#"><li title="Venez Voir"><strong>Vente Flash <span class="color-point">...</span></strong></li></a>
-                    <a href="#"><li><strong>Nos Conditions <span class="color-point">...</span></strong></li></a>
-               </ul>
-                </div>
-            <div class="copy">Copyright <span class="color-point"><strong>&copy;</strong></span> 2020 All rights reserved<span class="color-point"><strong>.</strong></span></div>
-            <div class="img-soc-paiem">
-                <img class="img-paiement-footer" src="https://aufonddujardin.fr/boutique/wp-content/uploads/2017/11/paiement_securise_paypal.png" alt="Icone de paiement" title="Paiement sécurisé">
-                <img class="reseau-sociau" src="https://miro.medium.com/max/621/1*XyvBPSfQebxwD652YQOtqw.png" alt="Nos réseaux sociaux" title="Nos réseaux sociaux">
-            </div>
-            </div>
-    <div class="end-color-footer"></div>
-</footer>
+    <?php include ("_footer.html"); ?>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
