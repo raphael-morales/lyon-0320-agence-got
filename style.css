@@ -21,7 +21,7 @@ blanc beige
 
  orange sur gris foncer 
 
- rgb(204, 79, 30); c'est le orange ces la couleur de la police
+ rgb(204, 79, 30); c'est le orange ces la couleur de la police.
 
  rgb(56, 55, 55); lui c'est le gris ond d'ecran
 
@@ -207,7 +207,59 @@ a:hover{
     color:rgba(255,255,255,0.8);
     transition:all .1s;
 }
-@media screen and (min-width: 740px) {
+/*contact*/
+.coordonnées{
+    display: flex;
+    justify-content: space-around;
+}
+
+section.coordonnées div{
+    margin-top: 10px;
+}
+
+
+form {
+    margin-top: 100px;
+  }
+  
+  #fields-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  form h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    padding: 3px;
+    width: 100%;
+    margin: 8px 0px;
+    box-sizing: border-box;
+  }
+  
+  form .button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  
+  form button {
+    background-color: #aaaaaa;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin: 0;
+  }
+
+  .nom{
+      display: flex;
+  }
+
+@media screen and (max-width: 740px) {
     body{
        margin:0 50px;
     }
@@ -255,3 +307,13 @@ a:hover{
   }
 
   
+  }
+
+    /*contact*/
+    .coordonnées{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nom{
+        flex-direction: column;
+    }
