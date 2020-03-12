@@ -1,35 +1,3 @@
-
-/*<link href="https://fonts.googleapis.com/css?family=Fondamento&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-la taille de la police 
-
-le margin
-
-la couleur de la police
-
-la taille des bouton
-
-couleur du fond 
-
-couleur du titre taille 
-
-taille des formulaire et type 
-
-blanc beige 
-
-
- orange sur gris foncer 
-
- rgb(204, 79, 30); c'est le orange ces la couleur de la police
-
- rgb(56, 55, 55); lui c'est le gris ond d'ecran
-
- rgba(255,255,255,0.8); lui c'est l blanc en surbrillant*/
-
- @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
 body {
     margin:0;
     font-family: 'Amatic SC', cursive;
@@ -39,14 +7,82 @@ body {
 
 }
 
+h1.reservation {
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+section.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: whitesmoke;
+}
+
+
+section.destination {
+    margin: 20px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+
+select.select {
+    width: 95%;
+    height: 40px;
+    margin: 10px;
+    background-color: white;
+}
+
+section.date {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.date section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 95%;
+    height: 70px;
+}
+input#start {
+    width: 100%;
+    height: 100%
+}
+
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+
 h2{
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-weight:bold;
     
 }
-/*acceuil*/
 
+input#return {
+    width: 100%;
+    height: 100%;
+}
+
+section.voyageur {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 95%;
+    height: 40px;
+}
+
+input#voyageur {
+    width: 100%;
+    height: 100%;
+}
 
 #imgSlide{
     width: 100%;
@@ -211,7 +247,178 @@ a:hover{
     color:rgba(255,255,255,0.8);
     transition:all .1s;
 }
+
+
+
+/*footer yacine Début*/
+footer{
+    font-family: fondamento, sans-serif;
+}
+.color-diff-back{
+    background-color: #ff9135;
+    width: auto;
+    height: 10px;
+    margin:0px;
+}
+
+.back-color{
+    background-color: #707372;
+    width: auto;
+    height: 1000px;
+    margin: 0;
+}
+footer div h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 20px;
+}
+.copy{
+    text-align: center;
+    color: #e4f1e7;
+    font-size: 20px;
+    padding-top: 60px;
+}
+.logo-footer{
+    width: 390px;
+    height: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+.color-point{
+    color:#ff9135;
+}
+.hr-footer{
+    margin-bottom: 30px;
+}
+.reseau-sociau{
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+footer a{
+    text-decoration-line: none;
+    text-decoration: none;
+}
+footer a:hover{
+    color:#e4f1e7;
+}
+footer a:visited{
+    color:#e4f1e7;
+}
+footer a:link{
+    color:#e4f1e7;
+}
+.figure-footer {
+    text-align: center;
+}
+.figuration-footer{
+    color: #e4f1e7;
+}
+.img-soc-paiem{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.img-paiement-footer{
+    width: 400px;
+    height: 100px;
+    cursor: pointer;
+}
+.end-color-footer{
+    background-color: #ff9135;
+    width: auto;
+    height: 10px;
+    margin:0px;
+}
+.rebrique-footer{
+    color:#e4f1e7;
+}
+.rebrique-footer{
+    margin-right: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+.rebrique-footer ul{
+    list-style: none;
+}
+.rebrique-footer ul li{
+    margin-bottom: 10px
+}
+.logo-footer:hover{
+    opacity: 0.9;
+}
+.h1-footer:hover{
+    opacity: 0.8;
+}
+.reseau-sociau:hover{
+    opacity: 0.7;
+}
+.img-paiement-footer:hover{
+    opacity: 0.7;
+}
+.rebrique-footer ul li:hover{
+    opacity: 0.7;
+}
+/*footer yacine Fin*/
+
 @media screen and (min-width: 740px) {
+/*contact*/
+.coordonnées{
+    display: flex;
+    justify-content: space-around;
+}
+
+section.coordonnées div{
+    margin-top: 10px;
+}
+
+
+form {
+    margin-top: 100px;
+  }
+  
+  #fields-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  form h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    padding: 3px;
+    width: 100%;
+    margin: 8px 0px;
+    box-sizing: border-box;
+  }
+  
+  form .button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  
+  form button {
+    background-color: #aaaaaa;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin: 0;
+  }
+
+  .nom{
+      display: flex;
+  }
+
+@media screen and (max-width: 740px) {
+
     body{
        margin:0 50px;
     }
@@ -242,6 +449,58 @@ a:hover{
     #imgSlide{
         width: 100%;
         height: 700px;
+  }
+/*================@media screen and (min-width: 740px) yacine footer Début*/
+    .logo-footer{
+        width: 250px;
+        height: 120px;
+    }
+    .figure-footer{
+        float:left;
+        margin-left: 50px;
+    }
+    .back-color{
+        height:575px; 
+    }
+    .rebrique-footer{
+        float: right;
+        font-size: 40px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+    .copy{
+        text-align: center;
+        margin-top: 210px;
+    }
+    .img-soc-paiem{
+        margin-top: 15px;
+    }
+    .reseau-sociau{
+        margin-left: 10px;
+    }
+    .rebrique-footer{
+        text-align:inherit;
+    }
+    .h1-footer{
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .rebrique-footer ul li{
+        margin-bottom: 0;
+    }
+    .a-logo-footer{
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+/*================@media screen and (min-width: 740px) yacine footer Fin*/
+
+}
+    
+
+    
+    
     }
     .headAcceuil{
         height: 700px;
@@ -259,12 +518,31 @@ a:hover{
         display: flex;
         justify-content: center;
     }
+
+
+
+section.button {
+    display: flex;
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+    /*contact*/
+    .coordonnées{
+        flex-direction: column;
+        text-align: center;
+
+    }
     .carte iframe{
         max-width: 800px;
     }
     .phraseAcceuil article{
         font-size:30px;
     }
-  }
+  
 
   
