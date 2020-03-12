@@ -204,6 +204,7 @@ a:hover{
 
 section.coordonnées div{
     margin-top: 10px;
+    background-color: #aaaaaa;
 }
 
 
@@ -248,6 +249,14 @@ form {
       display: flex;
   }
 
+  .map{
+      display: flex;
+      justify-content: center;
+  }
+  .horaires{
+      text-align: center;
+  }
+
 @media screen and (max-width: 740px) {
     body{
         margin:0 50px;
@@ -289,3 +298,4 @@ form {
     .nom{
         flex-direction: column;
     }
+
