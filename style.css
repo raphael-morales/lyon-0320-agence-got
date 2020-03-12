@@ -1,5 +1,10 @@
+body {
+    background-color: rgb(197, 195, 187);
+}
+
 h1.reservation {
     text-align: center;
+    margin-top:50px;
     margin-bottom: 50px;
 }
 
@@ -7,38 +12,65 @@ section.formulaire {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
     margin: 20px;
+    background-color: whitesmoke;
 }
 
 section.destination {
     margin: 20px;
-    width: max-content;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+select.select {
+    width: 95%;
+    height: 40px;
+    margin: 10px;
+    background-color: white;
 }
 
 section.date {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.date section {
+    display: flex;
+    flex-direction: column;
     margin: 20px;
+    width: 95%;
+    height: 70px;
+}
+input#start {
+    width: 100%;
+    height: 100%
+}
+
+input#return {
+    width: 100%;
+    height: 100%;
 }
 
 section.voyageur {
+    display: flex;
     justify-content: center;
     margin: 20px;
+    width: 95%;
+    height: 40px;
 }
 
-section.voyageur #enfant {
-    width: 200px;
-}
-
-section.voyageur #adulte {
-    width: 200px;
+input#voyageur {
+    width: 100%;
+    height: 100%;
 }
 
 section.button {
     display: flex;
-
-    margin: 20PX;
-}
-
-button {
-    width: 100%;
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
 }
