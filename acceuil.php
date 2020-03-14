@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Game of throne</title>
@@ -13,26 +13,25 @@
         <link rel="stylesheet" href="style.css">  
     </head>
     <body>
-       <?php include('_header.html'); ?>
-            
+       <?php include('_header.html'); ?> 
             
             <section class="headAcceuil">
                 <section id="conteneurimgSlide">
                     <img  id="imgSlide"  src="https://static.hitek.fr/img/actualite/2017/01/13/fb_the-wall-from-the-south.jpg"  alt="image slider" />
                 </section>
-                <h2 class=titreAcceuil>Voyages dans l'univers de GOT</h2>
+                <h2 class=titreAcceuil>Voyagez dans l'univers de <span class="petit">GOT</span><span class="grand">Game of Thrones</span></h2>
                 <section class="conteneurLigne">
                     
                         <input  class="btnSuivant" type="button" value="<" title="Photo précédente" onclick="slide('arriere')"/>
                     
                     <section class="conteneurFiltre">
-                        <select name="destination">
-                            <option value="test1">test1</option>
-                            <option value="test2">test2</option>
-                            <option value="test3">test3</option>
+                        <select name="destination" id="select">
+                            <option value="">Choisissez votre destination</option>
+                            <option value="0">Winterfell</option>
+                            <option value="1">Port Real</option>
                         </select>
                         
-                        <button type="button" class=" boutonAcc btn btn-dark">GO !</button>
+                        <button type="button" class=" boutonAcc btn btn-dark" onclick="go()">GO !</button>
                     </section>
                    
                    <input class="btnSuivant" type="button" value=">" title="Photo suivante" onclick="slide('avant')"/>
@@ -42,10 +41,6 @@
                 
             </section>
          
-           
-            
-            
-            
             <section class="phraseAcceuil">
                 <article>Choisissez votre déstination, puis partez à la conquète de Westeros en quelques clics</article>
             </section>
@@ -53,12 +48,11 @@
                 <iframe src="https://www.google.com/maps/d/embed?mid=1rObkxhdJkIpo9Mcwu_f5Hy2hVvSL8XBa" width="640" height="480"></iframe>
             </section>
 
-            <?php include('_footer.html'); ?>
+            <?php include('_footer.html'); ?> 
             
             <script src="img-deroulante.js"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   
     </body>
 </html>

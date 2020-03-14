@@ -1,3 +1,7 @@
+
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 body {
     margin:0;
     font-family: 'Amatic SC', cursive;
@@ -7,82 +11,14 @@ body {
 
 }
 
-h1.reservation {
-    text-align: center;
-    margin-top:50px;
-    margin-bottom: 50px;
-}
-
-section.formulaire {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    background-color: whitesmoke;
-}
-
-
-section.destination {
-    margin: 20px;
-    margin-bottom: 0;
-    width: 100%;
-}
-
-
-select.select {
-    width: 95%;
-    height: 40px;
-    margin: 10px;
-    background-color: white;
-}
-
-section.date {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
-}
-.date section {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    width: 95%;
-    height: 70px;
-}
-input#start {
-    width: 100%;
-    height: 100%
-}
-
- @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
-
-
 h2{
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-weight:bold;
     
 }
+/*acceuil*/
 
-input#return {
-    width: 100%;
-    height: 100%;
-}
-
-section.voyageur {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    width: 95%;
-    height: 40px;
-}
-
-input#voyageur {
-    width: 100%;
-    height: 100%;
-}
 
 #imgSlide{
     width: 100%;
@@ -90,17 +26,19 @@ input#voyageur {
     position: absolute;
     z-index: 5;
     top:0;
-    right: 0;
-    transition: opacity 1s ease-in-out;
+    
+   
+ 
 }
 .titreAcceuil{
     width: 100%;
     color: rgb(204, 79, 30);
-    font-size: 50px;
+    font-size: 40px;
     text-align:center;
     margin-top: 100px;
     text-shadow:1px 1px 1px black ;
     z-index: 6;
+    font-family: 'Amatic SC', cursive;
 }
 .headAcceuil{
     width: 100%;
@@ -133,6 +71,9 @@ input#voyageur {
 .conteneurFiltre select option{
     background-color:rgba(50, 50, 50, 1);
 }
+.grand{
+    display:none;
+}
 .boutonAcc{
     background-color:rgba(50, 50, 50, 0.8);
     margin-bottom: 10px;
@@ -146,9 +87,6 @@ input#voyageur {
     width: 100%;
 }
 
-.masquer{
-    opacity: 0;
-} 
 .conteneurLigne{
     display: flex;
     justify-content: space-between;;
@@ -160,12 +98,12 @@ input#voyageur {
     border:none;
     font-size: 70px;
     outline: none;
-    color: rgb(204, 79, 30);
+    color:rgba(204, 79, 30,0.5);
     font-family: 'Poppins', sans-serif;
     z-index: 6;
 }
 .btnSuivant:hover{
-    font-weight: bold;
+    color:rgba(204, 79, 30, 1);
 }
 
 .phraseAcceuil article{
@@ -179,6 +117,7 @@ input#voyageur {
     width: 100%;
 }
 
+
 /*header*/
 .menu{
     width:100%;
@@ -189,14 +128,14 @@ input#voyageur {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px ;
+   
 }
 .header img{
     height: 36px;
 }
  .title h1{
     font-size: 18px;
-    color: rgb(77, 74, 74);
+    color: rgb(5, 21, 26);
     font-family: 'Fondamento', cursive;
     text-shadow: 0.5px 1px rgb(206, 61, 24);
 }
@@ -205,7 +144,7 @@ input#voyageur {
     flex-direction: column;
     align-items: center;
     width: 40px;
-    background:rgb(56, 55, 55);
+    background:rgb(5, 21, 26);
     padding: 6px 8px;
     border-radius:4px;
     cursor:pointer;
@@ -216,6 +155,11 @@ input#voyageur {
     width: 100%;
     background-color: rgba(255,255,255,0.8);
 }
+
+.fa-bars::before{
+    display: none;
+}
+
 .dropdown{
     width:100%;
     height: 150px;
@@ -223,11 +167,12 @@ input#voyageur {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background:rgb(56, 55, 55);
+    background:rgb(5, 21, 26);
     border-radius:4px;
     overflow:hidden;
     transition:all .7s;
     max-height:0;
+    font-family: 'Roboto', sans-serif;
 }
 .down{
     max-height:150px;
@@ -235,7 +180,7 @@ input#voyageur {
 .arrow.gone{
     display:block;
 }
-a{
+.dropdown a{
     padding:7px 20px;
     border-radius: 4px;
     font-size: 14px;
@@ -248,14 +193,173 @@ a:hover{
     transition:all .1s;
 }
 
+   /* page-reservation */
+
+   h1.reservation {
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+label[for=destination] {
+    margin-left: 15px;
+}
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: whitesmoke;
+}
+.destination {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+.select {
+    width: 96%;
+    height: 40px;
+    margin: 10px;
+    margin-left: 18px;;
+    background-color: white;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.date section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 95%;
+    height: 70px;
+}
+input#start {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+input#return {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.voyageur {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 96%;
+    height: 40px;
+    margin-bottom: 30px;
+}
+input#voyageur {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section.button {
+    display: flex;
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+#po img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+/* contact */
+
+.coordonnées{
+    display: flex;
+    justify-content: space-around;
+}
+​
+section.coordonnées div{
+    margin-top: 10px;
+    background-color: #aaaaaa;
+    padding: 10px;
+}
+​
+​
+form {
+    margin-top: 100px;
+    border: 1px gray solid;
+  }
+  
+  #fields-container {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+  }
+  
+  form h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px gray solid;
+  }
+
+  p{
+      font-size: 24px;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    padding: 3px;
+    width: 100%;
+    margin: 8px 0px;
+    box-sizing: border-box;
+  }
+  
+  form .button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  
+  form button {
+    background-color: #aaaaaa;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin: 0;
+  }
+​
+  .nom{
+      display: flex;
+  }
+​
+  .map{
+      display: flex;
+      justify-content: center;
+  }
+  .horaires{
+      text-align: center;
+  }
+​
+  #phone{
+    display: flex;
+    justify-content: center;
+  }
+  .texte div{
+      display: flex;
+      justify-content: space-around;
+  }
 
 
 /*footer yacine Début*/
-footer{
-    font-family: fondamento, sans-serif;
-}
+
 .color-diff-back{
-    background-color: #ff9135;
     width: auto;
     height: 10px;
     margin:0px;
@@ -268,9 +372,9 @@ footer{
     margin: 0;
 }
 footer div h1 {
-    margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 3em;
+    font-size: 24px;
     padding-top: 20px;
 }
 .copy{
@@ -362,13 +466,202 @@ footer a:link{
 .rebrique-footer ul li:hover{
     opacity: 0.7;
 }
+
+
+/* page-reservation1 winterfell */
+
+h2 {
+    text-align: center;
+    font-family: "Fondamento", cursive;
+  }
+  
+  .titre {
+    text-align: center;
+  }
+  
+  .text1 {
+    text-align: center;
+    padding: 0 40px;
+  }
+  
+  .winter {
+    background-image: url("https://iphonesoft.fr/images/_082019/fond-ecran-dynamique-macos-wallpaper-club.jpg");
+  }
+  
+  .image-fond {
+    background: no-repeat;
+    height: 100px;
+    background-image: url("https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/801_Winterfell_Overview.png/revision/latest?cb=20190415031728");
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    margin: 0 50px 50px 50px;
+    padding: 50px;
+  }
+  
+  .album {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .photo1 {
+    height: 400px;
+    padding-bottom: 10px;
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://www.lebonguide.com/bundles/website/images/category/large/montagne-ski-surf-ski-de-fond.jpg");
+    background-size: contain;
+    display: inline-block;
+  }
+  
+  .photo2 {
+    height: 400px;
+  
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://static.apidae-tourisme.com/filestore/objets-touristiques/images/63/76/937023.jpg");
+    background-size: contain;
+  }
+  
+  .photo3 {
+    height: 400px;
+  
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://www.rts.ch/2019/04/04/17/09/10342466.image");
+    background-size: contain;
+  }
+  
+  .photo4 {
+    height: 400px;
+  
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://i.ytimg.com/vi/ZgFvuLl-G7E/maxresdefault.jpg");
+    background-size: contain;
+  }
+  
+  a:hover {
+    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.1s;
+  }
+  
+  /* port-royal */
+  
+  .summer {
+      background-image: url("https://hdfondsdecran.com/image/201609/2213/rayon-orange-arriere-plan-flou.jpg");
+    }
+    
+    .image-fond1 {
+      background: no-repeat;
+      height: 100px;
+      background-image: url("https://img.20mn.fr/W3Ps9vQDS6-pQWggu7rUvg/830x532_envie-evasion-partez-lieux-tournage-serie-game-of-thrones.jpg");
+      background-attachment: fixed;
+      flex-wrap: wrap;
+      margin: 0 50px 50px 50px;
+      padding: 50px;
+    }
+  
+    .ph{
+        height: 400px;
+    padding-bottom: 10px;
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-size: 500px 300px;
+    display: inline-block;
+    
+    }
+  
+  .ph1 {
+    background-image: url("https://www.jackiecuisine.com/wp-content/uploads/2020/02/hypogras-3w.jpg");
+    
+  }
+  
+  .ph2 {
+    background-image: url("https://m.oxybol.fr/scripts/files/587d42893b3159.41172983/balade-cheval-oxybol.jpg");
+    
+  }
+  
+  .ph3 {
+    
+    background-image: url("https://cdn02.visitbarcelona.com/files/5531-5624-imagenCAT/BarcelonaJetSki.T24c.jpg");
+    
+  }
+  
+  .ph4 {
+    background-image: url("https://previews.123rf.com/images/famveldman/famveldman1704/famveldman170400557/76535128-enfant-jouant-dans-le-champ-de-marguerite-fille-cueillir-des-fleurs-fra%C3%AEches-dans-des-marguerites-prai.jpg");
+   
+  }
+  
+  /*styllebouton*/
+  section.button {
+      display: flex;
+      width: 400px;
+      height: 40px;
+      margin: 20px auto;
+      justify-content: center;
+      text-align: center;
+      background-color: whitesmoke;
+  }
 /*footer yacine Fin*/
 
 @media screen and (min-width: 740px) {
+
+    /*acceuil*/
+    #imgSlide{
+        width: 100%;
+        height: 550px;
+    }
+    .headAcceuil{
+        height: 700px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .conteneurFiltre select{
+        width: 400px;
+    }
+    .conteneurFiltre{
+        flex-direction:row;
+    }
+    .boutonAcc{
+        margin-left:75px;
+    }
+    .carte{
+        display: flex;
+        justify-content: center;
+    }
+    .carte iframe{
+        max-width: 800px;
+    }
+    .phraseAcceuil article{
+        font-size:30px;
+    }
+    .petit{
+        display: none;
+    }
+    .grand{
+        display: inline;
+    }
+
 /*contact*/
 .coordonnées{
     display: flex;
     justify-content: space-around;
+}
+
+.titreAcceuil{
+    font-size: 35px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 section.coordonnées div{
@@ -417,19 +710,27 @@ form {
       display: flex;
   }
 
-@media screen and (max-width: 740px) {
+  .carte-info{
+      flex-direction: row;
+      flex-wrap: nowrap;
+  }
+
+  .info{
+      width: 60%;
+  }
 
     body{
-       margin:0 50px;
+       margin: 0 50px;
     }
+
     .header{
-        padding: 0 50px 0 50px;
+        padding: 20px 50px 0 50px;
     }
     .header img{
      height: 35px ;
     }
     .title h1{
-        font-size: 22px;
+        font-size: 24px;
     }
     .burger{
         display: none;
@@ -441,15 +742,15 @@ form {
         max-height: none;
         position: sticky;
         top: 0;
+        overflow: visible;
+        margin-bottom: 5px;
+        z-index: 10;
     }
-    a{
+    .dropdown a{
        margin: 0 40px;
+       font-size: 15px;
+       text-decoration: none;
     }
-    /*accueil*/
-    #imgSlide{
-        width: 100%;
-        height: 700px;
-  }
 /*================@media screen and (min-width: 740px) yacine footer Début*/
     .logo-footer{
         width: 250px;
@@ -464,7 +765,7 @@ form {
     }
     .rebrique-footer{
         float: right;
-        font-size: 40px;
+        font-size: 24px;
         margin-top: 0;
         margin-right: 0;
     }
@@ -484,6 +785,7 @@ form {
     .h1-footer{
         margin-bottom: 0;
         text-align: center;
+        font-style: 35;
     }
     .rebrique-footer ul li{
         margin-bottom: 0;
@@ -494,14 +796,6 @@ form {
     }
     
     
-/*================@media screen and (min-width: 740px) yacine footer Fin*/
-
-}
-    
-
-    
-    
-    }
     .headAcceuil{
         height: 700px;
     }
@@ -514,14 +808,14 @@ form {
     .boutonAcc{
         margin-left:75px;
     }
+
     .carte{
         display: flex;
         justify-content: center;
+        margin-bottom: 50px;
     }
 
-
-
-section.button {
+    section.button {
     display: flex;
     width: 400px;
     height: 40px;
@@ -529,20 +823,40 @@ section.button {
     justify-content: center;
     text-align: center;
     background-color: whitesmoke;
+    }
+
+    /* page-reservation */
+
+    .destination {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+​  /* page-reservation */
+
+.image-fond {
+  background: no-repeat;
+  height: 380px;
+  background-image: url("https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/801_Winterfell_Overview.png/revision/latest?cb=20190415031728");
+  background-attachment: fixed;
+  background-position: center;
 }
 
-    /*contact*/
-    .coordonnées{
-        flex-direction: column;
-        text-align: center;
+.album {
+  flex-direction: row;
+  justify-content: center;
+}
+}
 
-    }
-    .carte iframe{
-        max-width: 800px;
-    }
-    .phraseAcceuil article{
-        font-size:30px;
-    }
-  
-
-  
+.image-fond1 {
+  background: no-repeat;
+  height: 380px;
+  background-image: url("https://vignette.wikia.nocookie.net/game-of-thrones-le-trone-de-fer/images/7/71/Port-R%C3%A9al_vu_depuis_la_tour_de_la_main_%282x01%29.jpg/revision/latest?cb=20170716182940&path-prefix=fr");
+  background-attachment: fixed;
+  background-position: center;
+}
