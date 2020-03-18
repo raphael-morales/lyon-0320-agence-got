@@ -24,7 +24,6 @@ function changeImg(){
 
 function slide (x){
 
-   /*  document.getElementById("imgSlide").className="masquer"; */
 
     if (x=="avant")
         position++
@@ -39,10 +38,22 @@ function slide (x){
     }
     document.getElementById('imgSlide').src = imgs[position];
 
-  /*    var attenteTransition= setTimeout(function(){
-        document.getElementById("imgSlide").className="";
-        document.getElementById('imgSlide').src = imgs[position];},200);  */
+ 
 }
+
+function go(){
+  var valueSelect = document.getElementById('select').value;
+  console.log(valueSelect);
+   if (valueSelect==""){
+       alert("Veuillez choisir une déstination");
+   }
+   else if (valueSelect=="1"){
+     document.location.href="port_real.php";
+   }
+   else if (valueSelect=="0"){
+     document.location.href="winterfell.php";
+   }
+ }
 
 function drop() {
   document.getElementsByClassName('dropdown')[0].classList.toggle('down');
@@ -52,4 +63,17 @@ function drop() {
     }, 500)
 } 
   
-
+function changePrix(){
+  var Destination = document.getElementById('destination').value;
+  var nbPersonnes = document.getElementById('voyageur').value;
+  var prix = document.getElementById('spanPO');
+  if (Destination=="port_real"){
+    prix.innerHTML = nbPersonnes*249;
+  }
+  else if(Destination=="winterfell"){
+    prix.innerHTML = nbPersonnes*299;
+  }
+  else{
+    prix.innerHTML = 0;
+  }
+}
