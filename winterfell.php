@@ -36,14 +36,21 @@
 ​
     </section>
 ​
-​
+    <?php
+    $activityWinterfell = [
+        '<div class="photo1"><p>balade en ski</p></div>',
+        '<div class="photo2"><p>balade en chiens de traineau</p></div>',
+        '<div class="photo3"><p>chasse au marcheur blancs</p></div>',
+        '<div class="photo4"><p>balade en montagne</p></div>'
+    ];
+    ?>​
     <section>
         <article class="album">
-            
-            <div class="photo1"><p>balade en ski</p></div>
-            <div class="photo2"><p>balade en chiens de traineau</p></div>
-            <div class="photo3"><p>chasse au marcheur blancs</p></div>
-            <div class="photo4"><p>balade en montagne</p></div>
+            <?php
+            foreach ($activityWinterfell as $activitiesWinterfell){
+                echo $activitiesWinterfell;
+            }
+            ?>
         </article>
     </section>
 ​
