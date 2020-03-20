@@ -34,13 +34,21 @@
         aussi viens  profiter du climat chaleureux et de l'air marin!
       </article>
     </section>
-​
+​    <?php
+        $activity = [
+            "<div class='ph1 ph'><p>'concour de boisson'</p></div>",
+            "<div class='ph2 ph'><p>balade en cheval long du port</p></div>",
+            "<div class='ph3 ph'><p>faire du jet sky</p></div>",
+            "<div class='ph4 ph'><p>ceuillir des fleurs</p></div>"
+        ];
+    ?>
     <section>
       <article class="album">
-        <div class="ph1 ph"><p>concour de boisson</p></div>
-        <div class="ph2 ph"><p>balade en cheval long du port</p></div>
-        <div class="ph3 ph"><p>faire du jet sky</p></div>
-        <div class="ph4 ph"><p>ceuillir des fleurs</p></div>
+        <?php
+        foreach ($activity as $activities){
+            echo $activities;
+        }
+        ?>
       </article>
     </section>
 ​
