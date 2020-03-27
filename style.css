@@ -210,6 +210,9 @@ label[for=destination] {
     margin: 20px;
     background-color: whitesmoke;
 }
+form{
+    width: 100%;
+}
 .destination {
     margin-top: 20px;
     margin-left: 0;
@@ -233,7 +236,7 @@ label[for=destination] {
     flex-direction: column;
     margin: 20px;
     width: 95%;
-    height: 70px;
+    height: 100%;
 }
 input#start {
     width: 100%;
@@ -271,6 +274,10 @@ section.button {
 #po img{
     width: 30px;
     height: 30px;
+}
+#po{
+    display: flex;
+    justify-content: center;
 }
 
 

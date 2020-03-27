@@ -34,7 +34,7 @@
               <input type="email" placeholder="Email" required>
               <textarea placeholder="Message" rows="5"></textarea>
               <div class="button-container">
-                <button type="Envoyer">ENVOYER</button>
+                <button type="submit">ENVOYER</button>
               </div>
             </div>
           </form>

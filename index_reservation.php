@@ -1,10 +1,9 @@
  <?php include('_header.html'); ?>
-  </header>
 
   <h1 class="reservation">Formulaire de réservation</h1>
 
 <section class="formulaire">
-
+<form method="post" action="">
 <section class="destination">
   <label for="destination">Où?</label>
 <?php
@@ -51,7 +50,7 @@ $options = [
 <section class="button">
   <button type="button" class="btn btn-secondary btn-lg btn-block">Réservez</button>
 </section>
-
+</form>
 </section>
 
 
