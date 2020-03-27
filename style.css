@@ -374,7 +374,15 @@ fieldset div{
       display: flex;
       justify-content: space-around;
   }
-
+/*message_envoyé*/
+ .recu{
+     display: flex;
+     justify-content: center;
+ }
+ .message_recu{
+     width: 60%;
+     border: dashed red;
+ }
 
 /*footer yacine Début*/
 
