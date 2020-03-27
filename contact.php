@@ -6,6 +6,9 @@
  $userEmailErr = '';
 
  if (!empty($_POST)){
+     if (empty($_POST['genre'])){
+         $errors['genre'] = "* selectionner un genre";
+     }
      if (empty($_POST['Nom'])){
          $errors['Nom'] = "* Votre nom est requis";
      }
@@ -20,13 +23,17 @@
      if (empty($_POST['Message'])){
          $errors['Message'] = "* Votre message est requis";
      }
+     if ($_POST['genre'] == 'Masculin'){
+         $_POST['genre'] = 'Monsieur';
+     }else{
+         $_POST['genre'] = 'Madame';
+     }
 
 if (empty($errors)){
-   header('location: message_envoyé.php?Nom=' . $_POST['Nom'] . '&Prenom=' . $_POST['Prenom'] . '&Email=' . $_POST['Email'] . '&Message=' . $_POST['Message']);
+   header('location: message_envoyé.php?genre=' . $_POST['genre'] .'&Nom=' . $_POST['Nom'] . '&Prenom=' . $_POST['Prenom'] . '&Email=' . $_POST['Email'] . '&Message=' . $_POST['Message']);
 }
 
  }
-
  ?>
 
     <main>
@@ -54,9 +61,23 @@ if (empty($errors)){
           </p>
         </div>
       </article>
-        <form method="post" novalidate>
+        <form method="post">
             <h2>Contactez-nous</h2>
             <div id="fields-container">
+              <div class="genres">
+                  <fieldset>
+                      <legend>Genres :</legend>
+                  <?php if (isset($errors['genre'])) {?>
+                      <small class="erros"><?php echo $errors['genre']?> </small>
+                  <?php }?>
+                  <div>
+                      <label>Homme</label><input type="radio" id="choixmasculin" name="genre" value="Masculin" >
+                  </div>
+                  <div>
+                      <label>Femme</label><input type="radio" id="choixfeminin" name="genre" value="feminin">
+                  </div>
+                  </fieldset>
+              </div>
               <div class="nom">
                 <input type="text" placeholder="Nom" name="Nom" required>
                 <?php if (isset($errors['Nom'])) {?>
