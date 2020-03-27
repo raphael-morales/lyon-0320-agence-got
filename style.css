@@ -285,6 +285,10 @@ section.button {
 
 
 /* contact */
+.erros{
+    color: red;
+}
+
 
 .coordonnées{
     display: flex;

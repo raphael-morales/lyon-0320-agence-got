@@ -1,4 +1,31 @@
  <?php include('_header.html'); ?>
+
+ <?php
+
+ $errors = [];
+ $userEmailErr = '';
+
+ if (!empty($_POST)){
+     if (empty($_POST['Nom'])){
+         $errors['Nom'] = "* Votre nom est requis";
+     }
+     if (empty($_POST['Prenom'])){
+         $errors['Prenom'] = "* Votre prénom est requis";
+     }
+     if (filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL)) {
+         $userEmail = $_POST["Email"];
+     } else {
+         $userEmailErr = "* votre email est requis";
+     }
+     if (empty($_POST['Message'])){
+         $errors['Message'] = "* Votre message est requis";
+     }
+
+
+ }
+
+ ?>
+
     <main>
       <section class="coordonnées">
         <div class="adresse">
@@ -24,15 +51,25 @@
           </p>
         </div>
       </article>
-        <form>
+        <form method="post" novalidate>
             <h2>Contactez-nous</h2>
             <div id="fields-container">
               <div class="nom">
-                <input type="text" placeholder="Nom" required>
-                <input type="text" placeholder="Prenom" required>
+                <input type="text" placeholder="Nom" name="Nom" required>
+                <?php if (isset($errors['Nom'])) {?>
+                    <small class="erros"><?php echo $errors['Nom']?> </small>
+                <?php }?>
+                <input type="text" placeholder="Prenom" name="Prenom" required>
+                  <?php if (isset($errors['Prenom'])) {?>
+                      <small class="erros"><?php echo $errors['Prenom']?> </small>
+                  <?php }?>
               </div>
-              <input type="email" placeholder="Email" required>
-              <textarea placeholder="Message" rows="5"></textarea>
+              <input type="email" placeholder="Email" name="Email" required>
+                    <small class="erros"><?php echo $userEmailErr?> </small>
+              <textarea placeholder="Message" name="Message" rows="5"></textarea>
+                <?php if (isset($errors['Message'])) {?>
+                    <small class="erros"><?php echo $errors['Message']?> </small>
+                <?php }?>
               <div class="button-container">
                 <button type="submit">ENVOYER</button>
               </div>
