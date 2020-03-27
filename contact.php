@@ -23,7 +23,7 @@
      if (empty($_POST['Message'])){
          $errors['Message'] = "* Votre message est requis";
      }
-     if ($_POST['genre'] == 'Masculin'){
+     if (empty($_POST['genre']) == 'Masculin'){
          $_POST['genre'] = 'Monsieur';
      }else{
          $_POST['genre'] = 'Madame';
@@ -61,7 +61,7 @@ if (empty($errors)){
           </p>
         </div>
       </article>
-        <form method="post">
+        <form method="post" novalidate>
             <h2>Contactez-nous</h2>
             <div id="fields-container">
               <div class="genres">
@@ -71,10 +71,10 @@ if (empty($errors)){
                       <small class="erros"><?php echo $errors['genre']?> </small>
                   <?php }?>
                   <div>
-                      <label>Homme</label><input type="radio" id="choixmasculin" name="genre" value="Masculin" >
+                      <label for="choixmasculin">Homme</label><input type="radio" id="choixmasculin" name="genre" value="Masculin" >
                   </div>
                   <div>
-                      <label>Femme</label><input type="radio" id="choixfeminin" name="genre" value="feminin">
+                      <label for="choixfeminin">Femme</label><input type="radio" id="choixfeminin" name="genre" value="feminin">
                   </div>
                   </fieldset>
               </div>
