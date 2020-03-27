@@ -21,6 +21,9 @@
          $errors['Message'] = "* Votre message est requis";
      }
 
+if (empty($errors)){
+   header('location: message_envoyé.php?Nom=' . $_POST['Nom'] . '&Prenom=' . $_POST['Prenom'] . '&Email=' . $_POST['Email'] . '&Message=' . $_POST['Message']);
+}
 
  }
 
