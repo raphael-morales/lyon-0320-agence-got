@@ -1,5 +1,6 @@
  <?php include('_header.html');
  var_dump($_POST);
+ echo strrev($_POST['start']);
  $errors = [];
 
  if (!empty($_POST)){
