@@ -1,6 +1,5 @@
  <?php include('_header.html');
- var_dump($_POST);
- echo strrev($_POST['start']);
+ 
  $errors = [];
 
  if (!empty($_POST)){
@@ -23,6 +22,12 @@
 
  }
 
+ $options = [
+         "value=\"\"" => 'Choisissez votre destination',
+        "value=\"port_real\"" => 'Port Real',
+        "value=\"winterfell\"" => 'Winterfell'
+ ];
+
  ?>
 
   <h1 class="reservation">Formulaire de réservation</h1>
@@ -34,19 +39,12 @@
         <?php if (isset($errors['destination'])){ ?>
         <p><small class="erros"><?php echo $errors['destination'] ?></small></p>
         <?php } ?>
-    <?php
-    $options = [
-            '<option value="">Choisissez votre destination</option>',
-            '<option value="port_real">Port Real</option>',
-            '<option value="winterfell">Winterfell</option>'
-    ];
-    ?>
+
       <select class="select" name="destination" id="destination" onclick = "changePrix()">
-        <?php
-        foreach ($options as $option) {
-            echo $option;
-        }
-        ?>
+          <?php foreach ($options as $values => $destinations){ ?>
+              <option <?php echo $values ?>><?php echo $destinations ?></option>
+          <?php } ?>
+//
 
 
       </select>
