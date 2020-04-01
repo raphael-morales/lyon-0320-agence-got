@@ -23,7 +23,7 @@
      if (empty($_POST['Message'])){
          $errors['Message'] = "* Votre message est requis";
      }
-     if (empty($_POST['genre']) == 'Masculin'){
+     if ($_POST['genre'] == 'Masculin'){
          $_POST['genre'] = 'Monsieur';
      }else{
          $_POST['genre'] = 'Madame';
